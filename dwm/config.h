@@ -86,6 +86,9 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_period, focusmon,       {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
+	{ 0,                            XK_Print,  spawn,          SHCMD("maim ~/$(date +%s).png") },
+	{ 0|ShiftMask,                  XK_Print,  spawn,          SHCMD("maim --select ~/$(date +%s).png") },
+	{ 0|ControlMask,                XK_Print,  spawn,          SHCMD("maim -s | xclip -selection clipboard -t image/png") },
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)
