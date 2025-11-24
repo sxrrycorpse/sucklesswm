@@ -66,6 +66,11 @@ static const char *filecmd[]  = { "thunar", NULL };
 static const char *steamcmd[]  = { "steam", NULL };
 static const char *discordcmd[] = { "discord", NULL };
 static const char *browsercmd[] = { "firefox", NULL };
+/*
+static const char *audiodecr[] = { "pamixer", "-d", "5", NULL };
+static const char *audioincr[] = { "pamixer", "-i", "5", NULL };
+static const char *audiomute[] = { "pamixer", "-t", NULL };
+*/
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -96,6 +101,11 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_period, focusmon,       {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
+	/*
+	{ 0,               XK_AudioMute,          spawn,          {.v = audiomute} },
+	{ 0,               XK_AudioLowerVolume,   spawn,          {.v = audiodecr} },
+	{ 0,               XK_AudioRaiseVolume,   spawn,          {.v = audioincr} },
+	*/
 	{ 0,                            XK_Print,  spawn,          SHCMD("maim ~/$(date +%s).png") },
 	{ 0|ShiftMask,                  XK_Print,  spawn,          SHCMD("maim --select ~/$(date +%s).png") },
 	{ 0|ControlMask,                XK_Print,  spawn,          SHCMD("maim -s | xclip -selection clipboard -t image/png") },
