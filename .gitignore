@@ -2,3 +2,7 @@ dwm/dwm
 dwm/drw.o
 dwm/dwm.o
 dwm/util.o
+
+st/st
+st/st.o
+st/x.o
