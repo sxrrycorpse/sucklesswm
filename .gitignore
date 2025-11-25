@@ -6,3 +6,7 @@ dwm/util.o
 st/st
 st/st.o
 st/x.o
+
+slock/explicit_bzero.o
+slock/slock
+slock/slock.o
