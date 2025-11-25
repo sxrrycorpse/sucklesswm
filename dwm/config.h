@@ -63,6 +63,7 @@ static const Layout layouts[] = {
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
+static const char *lockcmd[] = { "slock", NULL };
 static const char *termcmd[]  = { "st", NULL };
 static const char *filecmd[]  = { "thunar", NULL };
 static const char *steamcmd[]  = { "steam", NULL };
@@ -105,9 +106,10 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_period, focusmon,       {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
-	{ 0,             XF86XK_AudioMute,         spawn,          {.v = audiomute} },
-	{ 0,             XF86XK_AudioLowerVolume,  spawn,          {.v = audiodecr} },
-	{ 0,             XF86XK_AudioRaiseVolume,  spawn,          {.v = audioincr} },
+	{ 0,                            XK_F9,     spawn,          {.v = lockcmd } },
+	{ 0,             XF86XK_AudioMute,         spawn,          {.v = audiomute } },
+	{ 0,             XF86XK_AudioLowerVolume,  spawn,          {.v = audiodecr } },
+	{ 0,             XF86XK_AudioRaiseVolume,  spawn,          {.v = audioincr } },
 	{ 0,                            XK_Print,  spawn,          SHCMD("maim ~/$(date +%s).png") },
 	{ 0|ShiftMask,                  XK_Print,  spawn,          SHCMD("maim --select ~/$(date +%s).png") },
 	{ 0|ControlMask,                XK_Print,  spawn,          SHCMD("maim -s | xclip -selection clipboard -t image/png") },
