@@ -10,3 +10,11 @@ st/x.o
 slock/explicit_bzero.o
 slock/slock
 slock/slock.o
+
+dmenu/dmenu
+dmenu/dmenu.o
+dmenu/drw.o
+dmenu/stest
+dmenu/stest.o
+dmenu/util.o
+
