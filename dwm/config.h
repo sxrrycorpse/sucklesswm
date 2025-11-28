@@ -63,6 +63,7 @@ static const Layout layouts[] = {
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
+static const char *passmenu[] = { "passmenu", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
 static const char *lockcmd[] = { "slock", NULL };
 static const char *termcmd[]  = { "st", NULL };
 static const char *filecmd[]  = { "thunar", NULL };
@@ -81,6 +82,7 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_w,      spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_e,      spawn,          {.v = filecmd } },
 	{ MODKEY,                       XK_r,      spawn,          {.v = dmenucmd } },
+	{ MODKEY,                       XK_p,      spawn,          {.v = passmenu } },
 	{ MODKEY,                       XK_s,      spawn,          {.v = steamcmd } },
 	{ MODKEY,                       XK_d,      spawn,          {.v = discordcmd } },
 	{ MODKEY,                       XK_v,      spawn,          {.v = fbrowsercmd } },
