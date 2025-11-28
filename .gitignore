@@ -1,45 +1,16 @@
 dwm/dwm
-dwm/drw.o
-dwm/dwm.o
-dwm/util.o
+dwm/*.o
 
 st/st
-st/st.o
-st/x.o
+st/*.o
 
-slock/explicit_bzero.o
 slock/slock
-slock/slock.o
+slock/*.o
 
 dmenu/dmenu
-dmenu/dmenu.o
-dmenu/drw.o
 dmenu/stest
-dmenu/stest.o
-dmenu/util.o
+dmenu/*.o
 
-slstatus/components/battery.o
-slstatus/components/cat.o
-slstatus/components/cpu.o
-slstatus/components/datetime.o
-slstatus/components/disk.o
-slstatus/components/entropy.o
-slstatus/components/hostname.o
-slstatus/components/ip.o
-slstatus/components/kernel_release.o
-slstatus/components/keyboard_indicators.o
-slstatus/components/keymap.o
-slstatus/components/load_avg.o
-slstatus/components/netspeeds.o
-slstatus/components/num_files.o
-slstatus/components/ram.o
-slstatus/components/run_command.o
-slstatus/components/swap.o
-slstatus/components/temperature.o
-slstatus/components/uptime.o
-slstatus/components/user.o
-slstatus/components/volume.o
-slstatus/components/wifi.o
 slstatus/slstatus
-slstatus/slstatus.o
-slstatus/util.o
+slstatus/*.o
+slstatus/components/*.o
