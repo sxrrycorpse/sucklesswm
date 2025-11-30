@@ -1,5 +1,4 @@
 /* See LICENSE file for copyright and license details. */
-#include <X11/XF86keysym.h>
 
 /* appearance */
 static const unsigned int borderpx  = 1;        /* border pixel of windows */
@@ -109,9 +108,9 @@ static const Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
 	{ MODKEY,                       XK_F9,     spawn,          {.v = lockcmd } },
-	{ 0,             XF86XK_AudioMute,         spawn,          {.v = audiomute } },
-	{ 0,             XF86XK_AudioLowerVolume,  spawn,          {.v = audiodecr } },
-	{ 0,             XF86XK_AudioRaiseVolume,  spawn,          {.v = audioincr } },
+	{ MODKEY,                       XK_F1,     spawn,          {.v = audiomute } },
+	{ MODKEY,                       XK_F2,     spawn,          {.v = audiodecr } },
+	{ MODKEY,                       XK_F3,     spawn,          {.v = audioincr } },
 	{ 0,                            XK_Print,  spawn,          SHCMD("maim ~/$(date +%s).png") },
 	{ 0|ShiftMask,                  XK_Print,  spawn,          SHCMD("maim --select ~/$(date +%s).png") },
 	{ 0|ControlMask,                XK_Print,  spawn,          SHCMD("maim -s | xclip -selection clipboard -t image/png") },
